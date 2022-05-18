@@ -7,9 +7,9 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Laravel Started !!!!</h1>
+    <h1>Laravel Started !!!!</h1><br><br>
 
-    
+    <h1>First Git experiment</h1><br><br>
     <img src="images/Art desgn.jpg" alt="image">
     @yield('content')
     <!-- href link method -->
