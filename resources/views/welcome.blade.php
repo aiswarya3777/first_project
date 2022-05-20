@@ -14,6 +14,7 @@
     @yield('content')
     <!-- href link method -->
     <a href="{{ Route ('index') }}">Index Page</a> &nbsp; &nbsp; &nbsp;
-    <a href="{{ Route ('home') }}">Home Page</a>&nbsp; &nbsp; &nbsp;   
+    <a href="{{ Route ('home') }}">Home Page</a>&nbsp; &nbsp; &nbsp;
+    <a href="{{ Route ('welcome') }}">welcome Page</a>&nbsp; &nbsp; &nbsp;   
 </body>
 </html>

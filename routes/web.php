@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\Route;
 // });
 
 // "view" command only to view the page
-Route::view('/','welcome');
+Route::view('/','welcome')->name('welcome');
 
 //by using the "name" the changes inside the code will not affect the url. 
 Route::view('home','home')->name('home');
