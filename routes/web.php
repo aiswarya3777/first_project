@@ -23,3 +23,4 @@ Route::view('/','welcome')->name('welcome');
 //by using the "name" the changes inside the code will not affect the url. 
 Route::view('home','home')->name('home');
 Route::view('index','index')->name('index');
+Route::view('prop','display_prop');

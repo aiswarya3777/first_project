@@ -1,0 +1,39 @@
+
+*{
+    background-color: rgb(105, 182, 43) ;
+    color: blue;
+}
+h1{
+    text-align:center;
+    color: red;
+    background-color: grey;
+}
+/* only div content will style */
+div + p{
+    color: rgb(177, 26, 175);
+    background-color: brown;
+   
+}
+div{
+    float: left;
+   /* margin-top: 50px; */
+    width: 30%;
+    height: 20px;
+    text-align: justify;
+    font-size: 20px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+span p{
+    color: black;
+}
+input[type="text"]{
+    margin-bottom: 5px;
+    border-radius: 5px;
+    color: blue;
+    width: 50%;
+}
+p{
+    
+    text-align: right; 
+    width: 50px;
+}
