@@ -6,10 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        div{
-            /* border: 1px solid black; */
-            /* background-color:darkgray; */
-        }
+       
         .div1{
             display: inline-block;
             width: 100px;
