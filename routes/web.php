@@ -24,3 +24,5 @@ Route::view('/','welcome')->name('welcome');
 Route::view('home','home')->name('home');
 Route::view('index','index')->name('index');
 Route::view('prop','display_prop');
+Route::view('float','float');
+Route::view('machine_test','machine_test');
