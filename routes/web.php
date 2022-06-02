@@ -19,7 +19,6 @@ use Illuminate\Support\Facades\Route;
 
 // "view" command only to view the page
 Route::view('/','welcome')->name('welcome');
-
 //by using the "name" the changes inside the code will not affect the url. 
 Route::view('home','home')->name('home');
 Route::view('index','index')->name('index');
@@ -33,3 +32,4 @@ Route::view('grid2','grid2');
 Route::view('grid_work','grid_work');
 Route::view('work2','grid_work2');
 Route::view('work3','grid_work3');
+Route::view('bootstrap','bootstrap1');
