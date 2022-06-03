@@ -33,3 +33,5 @@ Route::view('grid_work','grid_work');
 Route::view('work2','grid_work2');
 Route::view('work3','grid_work3');
 Route::view('bootstrap','bootstrap1');
+Route::view('table','bootstrap_table');
+Route::view('form','bootstrap-form');
