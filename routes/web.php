@@ -35,3 +35,5 @@ Route::view('work3','grid_work3');
 Route::view('bootstrap','bootstrap1');
 Route::view('table','bootstrap_table');
 Route::view('form','bootstrap-form');
+Route::view('sliding_navbar','sliding_navbar');
+Route::view('javascript','javascript');
