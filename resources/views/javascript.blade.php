@@ -41,6 +41,7 @@
         console.log(typeof(name));
         console.log(typeof(age));
         console.log(typeof(age1));
+        console.log(typeof(null));
         document.write("<br>");
         var name1 = "Aiswarya changed";
         var name2 = name1;
@@ -88,9 +89,28 @@
         // console.log(a)
         // var a =6;
         // console.log(a)
-        var array1 = [1,2,3,5]
-        var array2 = array1
-        console.log(array2)
+        // var array1 = [1,2,3,5]
+        // var array2 = array1
+        // console.log(array2)
+        // const pi=3.14;
+        // pi = 25;
+        // console.log(pi)
+        // we cant update const variable
+        var flower = "flower";
+        {
+            let flower = "Rose";
+        }
+        console.log(flower)
+
+        // let usage
+        var a =100;
+        function display(){
+            var a = 10; //here the value of the var is local that is within the function
+            console.log("inside function",a)
+        }
+        console.log(a)
+        display() //this is function call
+        // console.log(a) //here value 10 will not print because the value only access in the function
     </script>
 </body>
 </html>

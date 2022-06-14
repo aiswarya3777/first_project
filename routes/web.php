@@ -19,6 +19,7 @@ use Illuminate\Support\Facades\Route;
 
 // "view" command only to view the page
 Route::view('/','welcome')->name('welcome');
+
 //by using the "name" the changes inside the code will not affect the url. 
 Route::view('home','home')->name('home');
 Route::view('index','index')->name('index');
@@ -37,3 +38,13 @@ Route::view('table','bootstrap_table');
 Route::view('form','bootstrap-form');
 Route::view('sliding_navbar','sliding_navbar');
 Route::view('javascript','javascript');
+Route::view('projectdiv','project_div');
+Route::view('alert_type','alert_js');
+Route::view('if','if_condition_js');
+Route::view('add-employee','add_employee');
+Route::view('nested_if','nested_if');
+Route::view('loop','loop');
+Route::view('dowhile','do_while');
+Route::view('function','function');
+Route::view('ascending','ascending_order');
+Route::view('second_highest','second_greatest');
