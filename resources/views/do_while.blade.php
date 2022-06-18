@@ -16,22 +16,22 @@
         // }
         // while(i<10);
 
-        for nested
-        for(i=0;i<10;i++){
-            for(j=0;j<10;j++){
-                console.log(i,j)
-            }
-        }
-        var i = 1000;
-        for(let i= 0; i<10;i++){
-            console.log(i)
-        }
-         console.log(i) //use let  for for loop
+        // for nested
+        // for(i=0;i<10;i++){
+        //     for(j=0;j<10;j++){
+        //         console.log(i,j)
+        //     }
+        // }
+        // var i = 1000;
+        // for(let i= 0; i<10;i++){
+        //     console.log(i)
+        // }
+        //  console.log(i) //use let  for for loop
 
 
         //to find topscore
 
-        //  var marks = [20,21,22,23,24,25,26,27,28,29];
+        //  var marks = [27,28,29];
         //  var top_score = 0 ;
         //  var array_length = marks.length;
         //  for(let i=0;i<array_length;i++){
@@ -42,21 +42,21 @@
         //  console.log(top_score);
 
 
-        // var array2 = [1,2,3,4,5,6]
-        // var flag = 0;
-        // var input = parseInt(prompt("enter number"));
-        // var array_length = array2.length;
-        // for(let i=0;i<array_length;i++){
-        //     if(input == array2[i]){
-        //         flag = 1;
-        //         break
-        //     }
-        // }
-        // if(flag==1){
-        //     console.log("found")
-        // }else{
-        //     console.log("not found")
-        // }
+        var array2 = [1,2,3,4,5,6]
+        var flag = 0;
+        var input = parseInt(prompt("enter number"));
+        var array_length = array2.length;
+        for(let i=0;i<array_length;i++){
+            if(input == array2[i]){
+                flag = 1;
+                break
+            }
+        }
+        if(flag==1){
+            console.log("found")
+        }else{
+            console.log("not found")
+        }
 
             // for(let i = 0;i<5;i++){
             //     if(i==3){
