@@ -11,15 +11,10 @@
     <link rel="stylesheet" href="{{'css/calculator/calculator.css'}}">
 </head>
 <body>
-
+<br><br><br>   
     <div class="container">
       <input type="text" class="result">
-      <div class="first-row">
-        <input type="button" name="" value="&radic;" class="global">
-        <input type="button" name="" value="(" class="global">
-        <input type="button" name="" value=")" class="global">
-        <input type="button" name="" value="%" class="global">
-      </div>
+      <br><br><br>      
       <div class="second-row">
         <input type="button" name="" value="7" class="global">
         <input type="button" name="" value="8" class="global">

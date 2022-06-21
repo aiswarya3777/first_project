@@ -55,4 +55,5 @@ Route::view('operation_by_selector','operation_by_selector');
 Route::view('password','password_validation');
 Route::view('todo','to_do');
 Route::view('remove','remove_fruits');
-Route::view('calculator','calculator');
+Route::view('calculator','calculator1');
+Route::view('form','form_js');

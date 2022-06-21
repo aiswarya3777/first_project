@@ -27,9 +27,9 @@
                 for (j = 0; j <password_length ; j++) {
                     
                     if (special_chara[i] == password[j] ) {
-                        // var strong_result = document.getElementById("password_validation");
-                        // strong_result.style.color = "green";
-                        // strong_result.innerHTML += "Strong";
+                        var strong_result = document.getElementById("password_validation");
+                        strong_result.style.color = "green";
+                        strong_result.innerHTML += "Strong";
                       
                     } else {
                         var strong_result = document.getElementById("password_validation");
