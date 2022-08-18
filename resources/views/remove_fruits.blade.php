@@ -23,8 +23,7 @@
             var fruits = ["Orange", "Grape", "Mango", "Banana"];
             var length = fruits.length;
             var get_fruit = document.getElementById("to_be_removed").value;
-            var fruits = ["Orange", "Grape", "Mango", "Banana"];
-            var length = fruits.length;
+           
             var after_remove = [];
             for (let i = 0; i < length; i++) {
                 if (fruits[i] == get_fruit) {

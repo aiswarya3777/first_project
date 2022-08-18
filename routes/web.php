@@ -1,6 +1,8 @@
 <?php
 
+
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserAuth;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,6 +18,12 @@ use Illuminate\Support\Facades\Route;
 // Route::get('index', function () {
 //     return view('welcome');
 // });
+//CRUD
+Route::view('sum','LARAVEL_CRUD/sum')->name('sum');//first one for link and second is the correct path in resource
+Route::post('sum',[App\Http\Controllers\adding_controller::class,'add']);//sum link then in controller second = that controller and class,function name
+
+
+
 
 // "view" command only to view the page
 Route::view('/','welcome')->name('welcome');
@@ -57,3 +65,39 @@ Route::view('todo','to_do');
 Route::view('remove','remove_fruits');
 Route::view('calculator','calculator1');
 Route::view('form','form_js');
+Route::view('dumbell','dumbell');
+Route::view('slice','slice');
+Route::view('count','count_print');
+Route::view('array_method','array_method');
+Route::view('shift','js_array_shift');
+Route::view('jquery','jquery');
+Route::view('call_back','call_back');
+Route::view('cartoon','image_cartoon');
+Route::view('learn','jquery_learn');
+Route::view('add_class','add_class');
+Route::view('traversing','traversing');
+Route::view('form_validation','form_validation');
+Route::view('html_method','html_method');
+Route::view('form_learn','form_val_learn');
+Route::view('slider','slider');
+Route::view('palindrome','palindrome');
+// Route::view('login','login');
+Route::post("user",[UserAuth::class,'userLogin']);
+Route::view('profile','profile');
+
+Route::get('/login', function () {
+    if(session()->has('user'))
+    {
+    return redirect('profile');
+    }
+    return view('login');
+ });
+
+Route::get('/logout', function () {
+       if(session()->has('user'))
+       {
+        session()->pull('user');
+       }
+       return redirect('login');
+    });
+    Route::view('jquery_validation','jquery_validation');

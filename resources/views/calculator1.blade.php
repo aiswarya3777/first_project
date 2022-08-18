@@ -63,15 +63,6 @@
             document.getElementById("display").value += num;
             
         }
-        
-        // function dot(){
-        //    testvar = document.getElementById("display").value;
-        //    lenvar = testvar.length
-        //    if(testvar[lenvar-1]!= '.'){
-        //     document.getElementById("display").value += '.';
-        //    }
-        // }
-        
         count = 0;
         function dot(num){
             document.getElementById("display").value;
@@ -108,7 +99,8 @@
         }else if(curop == '/'){
             result = temp_val / cur_value;
         }
-        document.getElementById('display').value = result;
+        // document.getElementById('display').value = result;
+        document.getElementById('display').value = temp_val+curop+cur_value+"="+result;
             
             // console.log(cur_value)
             // console.log(temp_val)

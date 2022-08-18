@@ -98,16 +98,16 @@
         var array2 = [4,5,6,7,8,1];
         var flag =0;
         var output = [];
-        // var space =" ";
-        // var row = 3;
-        // for(i=0;i>=row;i++){
-        //     for(j=0;j<row-1;j++){
-        //         console.log(space);
-        //         for(k=i;k<2*i-1;k++){
-        //             console.log(star)
-        //         }
-        //     }
-        // }
+        var space =" ";
+        var row = 3;
+        for(i=0;i>=row;i++){
+            for(j=0;j<row-1;j++){
+                console.log(space);
+                for(k=i;k<2*i-1;k++){
+                    console.log(star)
+                }
+            }
+        }
 
 
         

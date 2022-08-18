@@ -25,7 +25,6 @@
             }
             for (i = 0; i < spcl_lenght; i++) {
                 for (j = 0; j <password_length ; j++) {
-                    
                     if (special_chara[i] == password[j] ) {
                         var strong_result = document.getElementById("password_validation");
                         strong_result.style.color = "green";

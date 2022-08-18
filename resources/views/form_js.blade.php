@@ -16,7 +16,7 @@
 </head>
 
 <body>
-    <form action="" method="get" name="form1" onsubmit="return validate_form()">
+    <form action="/login" method="get" name="form1" onsubmit="return validate_form()">
         <div class="container">
             <div class="row">
                 <input type="text" name="name1" id="name1" placeholder="Name">
@@ -42,7 +42,7 @@
             //    place = document.getElementById('place').value;
             //    email = document.getElementById('email').value;
             name = document.forms["form1"]["name1"].value;
-            place = name = document.forms["form1"]["place"].value;
+            place = document.forms["form1"]["place"].value;
             email = document.forms["form1"]["email"].value;
             document.forms["form1"]["name1"].focus()
             // document.forms["form1"]["place"].focus()

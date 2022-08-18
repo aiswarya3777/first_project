@@ -52,7 +52,7 @@
                 break
             }
         }
-        if(flag==1){
+        if(flag == 1){
             console.log("found")
         }else{
             console.log("not found")

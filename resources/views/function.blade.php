@@ -20,7 +20,7 @@
         // addition()
 
 
-            //function with parameters
+    //function with parameters
 
         // function addition(n1,n2){ //here n1 and n2 are parameters
         //     var sum = n1+n2;
