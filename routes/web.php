@@ -22,11 +22,46 @@ use App\Http\Controllers\UserAuth;
 Route::view('sum','LARAVEL_CRUD/sum')->name('sum');//first one for link and second is the correct path in resource
 Route::post('sum',[App\Http\Controllers\adding_controller::class,'add']);//sum link then in controller second = that controller and class,function name
 
+//register form
+Route::post('register',[App\Http\Controllers\adding_controller::class,'register']);
+Route::view('register','LARAVEL_CRUD/register_form')->name('register');
 
-
+//view detail page (data retrive )
+Route::view('details','LARAVEL_CRUD/register_details')->name('data_retrive');
+Route::get('details',[App\Http\Controllers\adding_controller::class,'data_retrive']);
 
 // "view" command only to view the page
 Route::view('/','welcome')->name('welcome');
+
+//delete
+// Id is default usage
+Route::get('delete/{Id}',[App\Http\Controllers\adding_controller::class,'deletedb']);
+
+//update data getting
+Route::get('update/{Id}',[App\Http\Controllers\adding_controller::class,'update']);
+
+//updated data
+Route::post('updated/{Id}',[App\Http\Controllers\adding_controller::class,'button_update_click']);
+
+//login_crud
+Route::view('login_crud','LARAVEL_CRUD/login')->name('login');
+Route::post('login_crud',[App\Http\Controllers\adding_controller::class,'login']);
+
+//logout
+Route::get('logout',[App\Http\Controllers\adding_controller::class,'logout']);
+
+//profile
+Route::get('profile',[App\Http\Controllers\adding_controller::class,'profile']);
+
+//file upload
+Route::view('file_upload','LARAVEL_CRUD/file_upload');
+Route::post('file_upload',[App\Http\Controllers\adding_controller::class,'upload']);
+Route::get('file_upload',[App\Http\Controllers\adding_controller::class,'upload_retrive']);
+
+//registration using model
+
+Route::view('model_reg','LARAVEL_CRUD/model_reg_form');
+Route::post('model_reg',[App\Http\Controllers\ModelController::class,'reg_insert']);
 
 //by using the "name" the changes inside the code will not affect the url. 
 Route::view('home','home')->name('home');
@@ -83,21 +118,5 @@ Route::view('slider','slider');
 Route::view('palindrome','palindrome');
 // Route::view('login','login');
 Route::post("user",[UserAuth::class,'userLogin']);
-Route::view('profile','profile');
+// Route::view('profile','profile');
 
-Route::get('/login', function () {
-    if(session()->has('user'))
-    {
-    return redirect('profile');
-    }
-    return view('login');
- });
-
-Route::get('/logout', function () {
-       if(session()->has('user'))
-       {
-        session()->pull('user');
-       }
-       return redirect('login');
-    });
-    Route::view('jquery_validation','jquery_validation');
