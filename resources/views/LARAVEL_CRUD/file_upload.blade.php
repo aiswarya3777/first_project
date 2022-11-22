@@ -11,10 +11,11 @@
 <body>
     <form action="" method="post" enctype="multipart/form-data">
         @csrf
-
+        
         Name : <input type="text" name="name" id=""><br><br>
         Email : <input type="text" name="email" id=""><br><br>
         Profile Photo : <input type="file" name="profile" id=""><br><br>
+        <embed src="images/SANITARY FITNESS CERTIFICATE.pdf" type="application/pdf" width="500px" height="500px" />
 
         <button type="submit">Save</button>
     </form>

@@ -3,6 +3,10 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserAuth;
+use App\Http\Controllers\ModelController;
+use App\Http\Controllers\ResourceController;
+
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,7 +26,7 @@ use App\Http\Controllers\UserAuth;
 Route::view('sum','LARAVEL_CRUD/sum')->name('sum');//first one for link and second is the correct path in resource
 Route::post('sum',[App\Http\Controllers\adding_controller::class,'add']);//sum link then in controller second = that controller and class,function name
 
-//register form
+//register formajax_posting
 Route::post('register',[App\Http\Controllers\adding_controller::class,'register']);
 Route::view('register','LARAVEL_CRUD/register_form')->name('register');
 
@@ -60,10 +64,49 @@ Route::get('file_upload',[App\Http\Controllers\adding_controller::class,'upload_
 
 //registration using model
 
-Route::view('model_reg','LARAVEL_CRUD/model_reg_form');
-Route::post('model_reg',[App\Http\Controllers\ModelController::class,'reg_insert']);
+// Route::view('model_reg','LARAVEL_CRUD/model_reg_form');
+// we can simplyfy the route
+// Route::post('model_reg',[ModelController::class,'reg_insert']);
 
+Route::post('model_reg',[App\Http\Controllers\ModelController::class,'reg_insert']);
+//registration data retrive
+Route::get('model_reg',[App\Http\Controllers\ModelController::class,'data_retrive']);
+
+// delete
+//never use same url
+Route::get('delete1/{Id}',[App\Http\Controllers\ModelController::class,'delete']);
+
+//update using model
+Route::get('update1/{Id}',[App\Http\Controllers\ModelController::class,'update']);
+Route::post('update_model/{Id}',[App\Http\Controllers\ModelController::class,'update_data']);
 //by using the "name" the changes inside the code will not affect the url. 
+
+
+//AJAX
+Route::view('ajax','ajax/ajax');
+Route::post('ajax_posting',[App\Http\Controllers\AjaxController::class,'first_ajax']);
+//to get data from db in ajax
+Route::get('data_retrive',[App\Http\Controllers\AjaxController::class,'data_from_db']);
+//delete data from table using ajax
+Route::post('delete_ajax',[App\Http\Controllers\AjaxController::class,'delete_from_ajax_table']);
+
+//update using ajax
+Route::post('update_ajax',[App\Http\Controllers\AjaxController::class,'update_from_ajax_table']);
+
+//check name in db
+
+Route::post('ajax_check_name',[App\Http\Controllers\AjaxController::class,'check_name_ajax']);
+
+//AJAX STUDY ROUTES
+Route::view('ajax_study','ajax/ajax_study');
+Route::post('study_post',[App\Http\Controllers\AjaxController::class,'study_post']);
+Route::get('data_form_db',[App\Http\Controllers\AjaxController::class,'study_data_retrive']);
+Route::post('datas_delete',[App\Http\Controllers\AjaxController::class,'data_delete']);
+// Route::view('ajax_update','ajax/ajax_update');
+Route::get('ajax_update',[App\Http\Controllers\AjaxController::class,'update_data']);
+Route::post('updated_data',[App\Http\Controllers\AjaxController::class,'updated_data_function']);
+
+
 Route::view('home','home')->name('home');
 Route::view('index','index')->name('index');
 Route::view('prop','display_prop');
@@ -120,3 +163,10 @@ Route::view('palindrome','palindrome');
 Route::post("user",[UserAuth::class,'userLogin']);
 // Route::view('profile','profile');
 
+
+//resource study
+
+Route::resource('add_project',ResourceController::class);
+
+//datatables in laravel
+Route::get('users', ['uses'=>'UserController@index', 'as'=>'users.index']);

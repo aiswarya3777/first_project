@@ -51,6 +51,30 @@
         </div>
         
     </form>
+
+    <br><br><br>
+    <table border="1" align="center">
+        <tr>
+            <td>ID</td>
+        <td>Fname</td>
+        <td>Lname</td>
+        <td>Email</td>
+        <td>Password</td>
+        <td>Action</td>
+        <td>Action</td>
+        </tr>
+@foreach($data as $i)
+        <tr>
+            <td>{{ $i->id }}</td>
+            <td>{{ $i->fname }}</td>
+            <td>{{ $i->lname }}</td>
+            <td>{{ $i->email }}</td>
+            <td>{{ $i->password }}</td>
+            <td><a href="{{ url('delete1') }}/{{ $i -> id }} ">Delete</a></td>
+            <td><a href="{{ url('update1')}}/{{ $i-> id }}">Update</a></td>
+        </tr>
+        @endforeach
+    </table>
 </body>
 </html>
 </body>

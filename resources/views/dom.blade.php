@@ -30,7 +30,10 @@
             
         }
 
-
+        var arra = [1,3,5,7]
+        var length = arra.length;
+        var sum = length * length;
+        console.log(sum);
     </script>
 </body>
 

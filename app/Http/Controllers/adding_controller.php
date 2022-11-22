@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use DB;//here we include db
+// use DB;//here we include db
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class adding_controller extends Controller
 {
@@ -22,7 +23,7 @@ class adding_controller extends Controller
         $password = $request->password;
         //insert data to db
         DB::table('register')->insert([
-            'first_name' => $fname,
+             'first_name' => $fname,
             'last_name' => $lname,
             'email' => $email,
             'password' => $password
@@ -72,6 +73,7 @@ function login(Request $request){
     $email = $request->email;
     $password = $request->password;
     $mail_data = DB::table("register")->where('email',$email)->first();
+    // dd($mail_data);
     // return view('LARAVEL_CRUD/login',['login_email' => $mail_data]);
     if(is_null($mail_data)){
         $message = 'no mail in db';
